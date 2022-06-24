@@ -1,0 +1,19 @@
+.main__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    max-width: 310px;
+    margin: 0 0 146px 0;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1279px) {
+    .main__text {
+        text-align: center;
+        margin: 22px 0 92px 0;
+    }
+}

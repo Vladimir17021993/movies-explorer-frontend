@@ -1,0 +1,11 @@
+.header__sign {
+    margin: 21px 0 21px 0;
+    display: flex;
+    gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .header__sign {
+        gap: 14px;
+    }
+}

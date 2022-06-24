@@ -1,0 +1,43 @@
+.header__burger-input {
+    display: block;
+    width: 33px;
+    height: 26px;
+    margin: 26px 38px 25px 0;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    top: 0;
+}
+
+.header__burger-input:checked ~ .header__burger-span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.header__burger-input:checked ~ .header__burger-span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.header__burger-input:checked ~ .header__burger-span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.header__burger-input:checked ~ .header__burger-list
+{
+  transform: none;
+  opacity: 1;
+  display: flex;
+}
+
+.header__burger-input:checked ~ .searchForm__checkbox
+{
+  display: none;
+}

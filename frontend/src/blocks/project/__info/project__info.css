@@ -1,0 +1,15 @@
+.project__info {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+@media  screen and (max-width: 1279px) {
+    .project__info {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

@@ -1,0 +1,17 @@
+.sign__submit-button {
+    width: 396px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+    margin: 71px 0 16px 0;
+    background: #2BE080;
+    border-radius: 3px;
+}

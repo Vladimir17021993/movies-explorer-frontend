@@ -1,0 +1,11 @@
+.student__img {
+    width: 270px;
+    height: 327px;
+}
+
+@media  screen and (max-width: 1279px) {
+    .student__img {
+        width: 255px;
+        height: 307px;
+    }
+}

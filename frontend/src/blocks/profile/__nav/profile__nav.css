@@ -1,0 +1,7 @@
+.profile__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 220px 0 70px 0;
+}

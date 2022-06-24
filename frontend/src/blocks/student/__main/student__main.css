@@ -1,0 +1,5 @@
+.student__main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+}

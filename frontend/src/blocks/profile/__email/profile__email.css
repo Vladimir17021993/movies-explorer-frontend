@@ -1,0 +1,6 @@
+.profile__email {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin-top: 17px;
+}

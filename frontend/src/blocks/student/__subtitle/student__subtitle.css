@@ -1,0 +1,17 @@
+.student__subtitle {
+    list-style-type: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+@media  screen and (max-width: 1279px) {
+    .student__subtitle {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

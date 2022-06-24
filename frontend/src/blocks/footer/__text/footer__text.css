@@ -1,0 +1,12 @@
+.footer__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #A0A0A0;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.7);
+    padding-bottom: 19px;
+    margin: 0 0 20px 0;
+}

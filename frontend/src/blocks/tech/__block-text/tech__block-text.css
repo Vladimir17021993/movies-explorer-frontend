@@ -1,0 +1,17 @@
+.tech__block-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+@media  screen and (max-width: 1279px) {
+    .tech__block-text {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

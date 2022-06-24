@@ -1,0 +1,7 @@
+.project__green-scale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    background: #2BE080;
+}

@@ -1,0 +1,10 @@
+.searchForm__button {
+    background: #2BE080;
+    border-radius: 48px;
+    width: 80px;
+    height: 34px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

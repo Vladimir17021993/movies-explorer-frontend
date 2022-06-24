@@ -1,0 +1,11 @@
+.project__scale {
+    display: flex;
+    margin: 110px 0 0 0;
+    padding-bottom: 110px;
+}
+
+@media  screen and (max-width: 1279px) {
+    .project__scale {
+        padding-bottom: 90px;
+    }
+}

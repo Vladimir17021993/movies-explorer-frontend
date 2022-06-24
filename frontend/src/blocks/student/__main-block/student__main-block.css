@@ -1,0 +1,9 @@
+.student__main-block {
+    max-width: 600px;
+}
+
+@media  screen and (max-width: 1279px) {
+    .student__main-block {
+        max-width: 364px;
+    }
+}

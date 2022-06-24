@@ -1,0 +1,19 @@
+.header__signup {
+    background: none;
+    border: none;
+    align-items: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    .header__signup {
+        font-size: 10px;
+        line-height: 16px;
+        height: 26px;
+        }
+}
