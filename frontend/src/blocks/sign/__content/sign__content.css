@@ -3,3 +3,9 @@
     flex-direction: column;
     margin-top: 22px;
 }
+
+@media screen and (max-width: 767px) {
+    .sign__content {
+        margin-top: 32px;
+    }
+}

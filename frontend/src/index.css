@@ -21,6 +21,7 @@
 @import url(./blocks/header/__burger-list/header__burger-list.css);
 @import url(./blocks/header/__burger-span/header__burger-span.css);
 @import url(./blocks/header/__burger-account/header__burger-account.css);
+@import url(./blocks/header/__burger-background/header__burger-background.css);
 @import url(./blocks/main/main.css);
 @import url(./blocks/main/__link/main__link.css);
 @import url(./blocks/main/__link-box/main__link-box.css);
@@ -64,6 +65,7 @@
 @import url(./blocks/student/student.css);
 @import url(./blocks/student/__portfolio-links/student__portfolio-links.css);
 @import url(./blocks/student/__link-block/student__link-block.css);
+@import url(./blocks/student/__link-img/student__link-img.css);
 @import url(./blocks/footer/__block/footer__block.css);
 @import url(./blocks/footer/__date/footer__date.css);
 @import url(./blocks/footer/__link/footer__link.css);

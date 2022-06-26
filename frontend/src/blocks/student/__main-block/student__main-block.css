@@ -7,3 +7,10 @@
         max-width: 364px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .student__main-block {
+        max-width: 292px;
+        margin-top: 40px;
+    }
+}

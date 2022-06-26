@@ -8,3 +8,11 @@
     text-decoration: none;
     color: #000000;
 }
+
+@media screen and (max-width: 767px) {
+    .header__signup-text {
+        font-size: 10px;
+        line-height: 16px;
+        height: 26px;
+    }
+}

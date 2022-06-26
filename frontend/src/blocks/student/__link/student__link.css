@@ -8,3 +8,10 @@
     letter-spacing: -0.04em;
     color: #000000;
 }
+
+@media screen and (max-width: 767px) {
+    .student__link {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

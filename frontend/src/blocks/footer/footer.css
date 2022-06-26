@@ -8,3 +8,10 @@
         padding: 79px 50px 20px 50px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .footer {
+        padding: 79px 10px 10px 10px;
+        background: #FFFFFF;
+    }
+}

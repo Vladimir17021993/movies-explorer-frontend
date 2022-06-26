@@ -17,3 +17,9 @@
         margin: 22px 0 92px 0;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .main__text {
+        margin: 24px 0 80px 0;
+    }
+}

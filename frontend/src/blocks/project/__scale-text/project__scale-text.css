@@ -7,3 +7,10 @@
     line-height: 17px;
     color: #000000;
 }
+
+@media screen and (max-width: 767px) {
+    .project__scale-text {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

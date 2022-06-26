@@ -5,7 +5,7 @@
     font-size: 13px;
     line-height: 16px;
     color: #000000;
-    width: 396px;
+    max-width: 396px;
     height: 46px;
     background: #F9F9F9;
     border-radius: 8px;

@@ -5,3 +5,18 @@
     grid-gap: 37px 24px;
     justify-content: center;
 }
+
+@media screen and (max-width: 1279px) {
+    .moviesCardList__cards {
+        grid-template-columns: repeat(auto-fill, 339px);
+        grid-gap: 30px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .moviesCardList__cards {
+        grid-template-columns: repeat(auto-fill, 300px);
+        grid-gap: 14px;
+        margin: 0;
+    }
+}

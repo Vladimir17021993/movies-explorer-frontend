@@ -10,4 +10,12 @@
     text-align: center;
     background: #FFFFFF;
     align-self: center;
+    border-color: #E8E8E8;
+}
+
+@media screen and (max-width: 767px) {
+    .moviesCardList__button {
+        width: 240px;
+        margin-top: 76px;
+    }
 }

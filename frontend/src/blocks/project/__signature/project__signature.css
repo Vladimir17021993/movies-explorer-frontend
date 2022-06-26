@@ -7,3 +7,10 @@
     line-height: 17px;
     color: #A0A0A0;
 }
+
+@media screen and (max-width: 767px) {
+    .project__signature {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

@@ -4,3 +4,9 @@
     width: 410px;
     margin-top: 17px;
 }
+
+@media screen and (max-width: 767px) {
+    .profile__email {
+        width: 260px;
+    }
+}

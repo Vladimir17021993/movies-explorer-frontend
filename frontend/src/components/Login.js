@@ -15,7 +15,7 @@ function Login() {
                 name="email"
                 required
             />
-            <p className="sign__subtitle">пароль</p>
+            <p className="sign__subtitle">Пароль</p>
             <input
                 type="password"
                 id="passwordinput"

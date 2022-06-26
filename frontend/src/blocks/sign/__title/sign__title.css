@@ -7,3 +7,10 @@
     color: #000000;
     margin: 0 0 40px 0;
 }
+
+@media screen and (max-width: 767px) {
+    .sign__title {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}

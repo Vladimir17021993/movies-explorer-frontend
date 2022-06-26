@@ -8,3 +8,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 767px) {
+    .searchForm {
+        padding: 98px 14px 51px 14px;
+        min-width: 80px;
+    }
+}
