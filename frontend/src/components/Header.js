@@ -1,5 +1,5 @@
 import account from "../images/account.svg";
-import {useLocation, Link} from 'react-router-dom';
+import { useLocation, Link } from "react-router-dom";
 import Menu from "./Menu.js";
 
 function Header() {

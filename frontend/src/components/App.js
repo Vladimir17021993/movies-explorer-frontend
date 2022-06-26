@@ -14,17 +14,17 @@ import Error404 from "../utils/Error404.js";
 function App() {
   return (
     <div className="page__container">
-        <Header />
-        <Routes>
-          <Route path="/"element={<Main />}></Route>
-          <Route path="/movies" element={<Movies />}></Route>
-          <Route path="/saved-movies" element={<SavedMovies />}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/sign-up" element={<Register />}></Route>
-          <Route path="/sign-in" element={<Login />}></Route>
-          <Route path="*" element={<Error404 />}></Route>
-        </Routes>
-        <Footer />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/saved-movies" element={<SavedMovies />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/sign-up" element={<Register />}></Route>
+        <Route path="/sign-in" element={<Login />}></Route>
+        <Route path="*" element={<Error404 />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.search-form__button {
+    background: #2BE080;
+    border-radius: 48px;
+    width: 80px;
+    height: 34px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .search-form {
+        padding: 98px 14px 51px 14px;
+        min-width: 80px;
+    }
+}

@@ -1,0 +1,12 @@
+.movies-card__like {
+    background-image: url(../../../images/like.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    align-self: center;
+    border: none;
+    background-color: #ffffff;
+    margin: 9px 16px 39px 0;
+}

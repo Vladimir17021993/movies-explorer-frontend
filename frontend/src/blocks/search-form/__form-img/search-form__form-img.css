@@ -1,0 +1,11 @@
+.search-form__form-img {
+    padding-right: 46px;
+    width: 34px;
+    height: 34px;
+}
+
+@media screen and (max-width: 767px) {
+    .search-form__form-img {
+        display: none;
+    }
+}

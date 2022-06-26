@@ -1,0 +1,16 @@
+.movies-card__img {
+    width: 364px;
+    height: 203px;
+}
+
+@media screen and (max-width: 1279px) {
+    .movies-card__img {
+        width: 339px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .movies-card__img {
+        width: 300px;
+    }
+}
