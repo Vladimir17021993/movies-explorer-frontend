@@ -1,0 +1,6 @@
+.movies-card__text-container {
+    margin: 16px 0 16px 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}

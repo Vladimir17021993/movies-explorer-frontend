@@ -1,0 +1,27 @@
+.sign__submit-button {
+    max-width: 396px;
+    min-width: 260px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+    margin: 71px 0 16px 0;
+    background: #2BE080;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 767px) {
+    .sign__submit-button {
+        margin-top: 157px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 14px;
+    }
+}

@@ -1,0 +1,17 @@
+.sign__signature-enter {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #2BE080;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sign__signature-enter {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

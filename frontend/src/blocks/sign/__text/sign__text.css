@@ -1,0 +1,14 @@
+.sign__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    max-width: 396px;
+    height: 46px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    border: #F9F9F9;
+    margin-bottom: 20px;
+}

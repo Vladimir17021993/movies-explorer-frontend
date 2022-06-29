@@ -1,0 +1,12 @@
+.profile__email {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin-top: 17px;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__email {
+        width: 260px;
+    }
+}

@@ -1,0 +1,22 @@
+.sign {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 396px;
+    margin: auto;
+    padding: 70px 0 70px 0;
+}
+
+@media screen and (max-width: 1279px) {
+    .sign {
+        padding: 232px 0 232px 0;
+        }
+}
+
+@media screen and (max-width: 767px) {
+    .sign {
+        padding: 56px 30px 30px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+}

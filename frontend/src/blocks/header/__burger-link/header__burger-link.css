@@ -1,0 +1,15 @@
+.header__burger-link {
+    padding: 10px 0;
+    font-size: 22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header__burger-link:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}

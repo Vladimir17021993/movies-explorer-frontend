@@ -1,0 +1,19 @@
+.main__img {
+    width: 310px;
+    height: 304px;
+    margin: 75px 0 145px 0;
+}
+
+@media  screen and (max-width: 1279px) {
+    .main__img {
+        margin: 140px 0 48px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main__img {
+        width: 210px;
+        height: 206px;
+        margin: 70px 0 44px 0;
+    }
+}

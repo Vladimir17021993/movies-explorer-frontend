@@ -1,0 +1,16 @@
+.project__signature {
+    margin: 14px 0 0 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A0A0A0;
+}
+
+@media screen and (max-width: 767px) {
+    .project__signature {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

@@ -1,0 +1,11 @@
+.project__text {
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .project__text {
+        flex-direction: column;
+        gap: 0;
+    }
+}

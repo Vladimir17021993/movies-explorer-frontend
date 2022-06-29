@@ -1,0 +1,7 @@
+.header__burger-box {
+    display: block;
+    margin: 26px 8px 25px 0;
+    z-index: 2;
+    -webkit-user-select: none;
+    user-select: none;
+}

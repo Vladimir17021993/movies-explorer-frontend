@@ -1,0 +1,12 @@
+.header__movies-account {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media  screen and (max-width: 1279px) {
+    .header__movies-account {
+        display: none;
+    }
+}

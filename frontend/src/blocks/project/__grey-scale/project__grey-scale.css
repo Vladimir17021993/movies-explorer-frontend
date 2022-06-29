@@ -1,0 +1,7 @@
+.project__grey-scale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    background: #F2F2F2;
+}
