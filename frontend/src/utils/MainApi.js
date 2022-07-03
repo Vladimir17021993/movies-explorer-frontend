@@ -72,7 +72,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  address: "http://localhost:3000",
+  address: "https://api.mesto.ralchenko.nomoredomains.xyz",
   headers: {
     "Content-Type": "application/json",
     Authorization: `Bearer ${localStorage.getItem("jwt")}`,

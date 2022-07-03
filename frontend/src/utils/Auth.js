@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://api.mesto.ralchenko.nomoredomains.xyz";
 
 const request = ({ url, method, jwt, body }) => {
     const config = {
