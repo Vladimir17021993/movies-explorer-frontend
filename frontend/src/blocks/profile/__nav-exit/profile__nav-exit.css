@@ -6,4 +6,10 @@
     line-height: 16px;
     color: #EE3465;
     text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.profile__nav-exit:hover {
+    cursor: pointer;
 }

@@ -1,26 +1,93 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import useFormValidator from "./Validator";
+import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
-function Profile() {
+function Profile(props) {
+  const useFormValidation = useFormValidator();
+  const { values, errors, isFormValid, resetForm, handleChange } =
+    useFormValidation;
+  const currentUser = React.useContext(CurrentUserContext);
+  const [name, setName] = React.useState(currentUser.name);
+  const [email, setEmail] = React.useState(currentUser.email);
+
+  function handleSubmitForm(evt) {
+    evt.preventDefault();
+    if (
+      isFormValid ||
+      currentUser.name === values.name ||
+      currentUser.email === values.email
+    ) {
+      props.onUpdate({ name, email });
+      resetForm();
+    }
+    return;
+  }
+
   return (
-    <section className="profile">
-      <h1 className="profile__title">Привет, Владимир!</h1>
+    <form className="profile" noValidate onSubmit={handleSubmitForm}>
+      <h1 className="profile__title">Привет, {currentUser.name}!</h1>
       <div className="profile__name">
         <p className="profile__designation">Имя</p>
-        <p className="profile__value">Владимир</p>
+        <input
+          id="profileName"
+          type="text"
+          name="name"
+          pattern={"^[a-zA-Zа-яА-ЯЁё\\s\\-]+$"}
+          value={values.name || name}
+          minLength="2"
+          maxLength="30"
+          disabled=""
+          onChange={(e) => {
+            handleChange(e);
+            setName(e.target.value);
+          }}
+          className="profile__value"
+        />
       </div>
+      <span className="profile__error-text">{errors.name}</span>
       <div className="profile__email">
-        <p className="profile__designation">123@123.ru</p>
-        <p className="profile__value">E-mail</p>
+        <p className="profile__designation">E-mail</p>
+        <input
+          className="profile__value"
+          id="profileEmail"
+          type="email"
+          name="email"
+          pattern={"^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"}
+          value={email}
+          onChange={(e) => {
+            handleChange(e);
+            setEmail(e.target.value);
+          }}
+        />
       </div>
+      <span className="profile__error-text">{errors.email}</span>
       <nav className="profile__nav">
-        <button className="profile__nav-edit" to="/">
+        <button
+          className={`profile__nav-edit ${
+            (!isFormValid ||
+              currentUser.name === values.name ||
+              currentUser.email === values.email) &&
+            "profile__nav-edit_disabled"
+          }`}
+          type="submit"
+          disabled={
+            !isFormValid ||
+            currentUser.name === values.name ||
+            currentUser.email === values.email
+          }
+        >
           Редактировать
         </button>
-        <Link className="profile__nav-exit" to="/">
+        <button
+          type="button"
+          onClick={props.onLogout}
+          className="profile__nav-exit"
+          to="/"
+        >
           Выйти из аккаунта
-        </Link>
+        </button>
       </nav>
-    </section>
+    </form>
   );
 }
 

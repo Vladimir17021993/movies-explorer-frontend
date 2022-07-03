@@ -40,7 +40,6 @@
 }
 
 .preloader {
-    display: none;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -52,6 +51,7 @@
     width: 100px;
     height: 100px;
     position: relative;
+    margin: auto;
 }
 
 .preloader__round {
