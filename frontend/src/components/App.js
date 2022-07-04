@@ -41,7 +41,7 @@ function App() {
         history("/movies");
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
         if (err === 401) {
           alert("Неверный логин или пароль");
         } else alert("Что то пошло не так, попробуйте позже");
@@ -72,7 +72,10 @@ function App() {
           ? history("/movies")
           : history(location.pathname);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert("Что то пошло не так, попробуйте позже");
+        console.log(err);
+      });
   };
 
   React.useEffect(() => {
@@ -103,8 +106,10 @@ function App() {
       .setUserInfo(data.name, data.email)
       .then((userData) => {
         setCurrentUser(userData);
+        alert("Данные успешно изменены");
       })
       .catch((error) => {
+        alert("Что то пошло не так, попробуйте позже");
         console.log(error);
       });
   }
