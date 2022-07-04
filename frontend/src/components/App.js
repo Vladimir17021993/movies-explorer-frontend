@@ -41,7 +41,8 @@ function App() {
         history("/movies");
       })
       .catch((err) => {
-        if (err === "401") {
+        console.log(err)
+        if (err === 401) {
           alert("Неверный логин или пароль");
         } else alert("Что то пошло не так, попробуйте позже");
       });
