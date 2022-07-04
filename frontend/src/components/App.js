@@ -27,7 +27,7 @@ function App() {
 
   React.useEffect(() => {
     tokenCheck();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleLogin(data) {
@@ -40,7 +40,11 @@ function App() {
         setLogin(true);
         history("/movies");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err === "401") {
+          alert("Неверный логин или пароль");
+        } else alert("Что то пошло не так, попробуйте позже");
+      });
     console.log(data);
   }
 
@@ -84,7 +88,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [login]);
 
   function handleLogout() {
@@ -223,7 +227,7 @@ function App() {
   useEffect(() => {
     handleGetSavedMovies();
     isAppMovies();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
