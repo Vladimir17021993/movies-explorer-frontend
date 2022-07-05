@@ -20,7 +20,7 @@ function Movies(props) {
   const [search, setSearch] = useState("");
   const [isEmpty, setIsEmpty] = useState(true);
   const [movies, setMovies] = useState([]);
-  const lastSearch = localStorage.getItem("search");
+  const [firstLook, setFirstLook] = useState(true);
   const useFormValidation = useFormValidator();
   const { searchValue } = useFormValidation.values;
   const { errors, isFormValid, resetForm } = useFormValidation;
@@ -28,6 +28,13 @@ function Movies(props) {
   React.useEffect(() => {
     resetForm();
   }, [resetForm]);
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    setSearch(searchValue);
+    setIsLoading(true);
+    setFirstLook(false);
+  }
 
   const getCheckbox = useCallback(() => {
     const lastCheckbox = localStorage.getItem("checkbox");
@@ -54,12 +61,6 @@ function Movies(props) {
   function changeMoviesType(e) {
     setIsShort(!props.isShort);
     localStorage.setItem("checkbox", JSON.stringify(!props.isShort));
-  }
-
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    setSearch(searchValue);
-    setIsLoading(true);
   }
 
   const storageMovies = useCallback(() => {
@@ -91,7 +92,7 @@ function Movies(props) {
             type="text"
             name="searchValue"
             id="searchValue"
-            placeholder={lastSearch || "Фильм"}
+            placeholder={"Фильм"}
             onChange={useFormValidation.handleChange}
             value={searchValue || ""}
             required
@@ -133,6 +134,7 @@ function Movies(props) {
           handleDeleteMovie={handleDeleteMovie}
           handleMarkedMovie={handleMarkedMovie}
           checkIsMovieSaved={checkIsMovieSaved}
+          firstLook={firstLook}
         />
       )}
     </div>

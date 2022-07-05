@@ -54,57 +54,62 @@ function MoviesCardList(props) {
     <>
       {location.pathname === "/movies" && (
         <div>
-          {typeMovies.length === 0 ? (
-            <div className="search-form__empty-block">
-              <p className="search-form__empty-text">Ничего не найдено</p>
-            </div>
+          {props.firstLook && typeMovies.length === 0 ? (
+            <div></div>
           ) : (
-            <section className="movies-cardlist">
-              <div className="movies-cardlist__cards">
-                {typeMovies
-                  .map((movie) => {
-                    return (
-                      <MoviesCard
-                        {...movie}
-                        key={movie.movieId}
-                        movie={movie}
-                        checkIsMovieSaved={checkIsMovieSaved}
-                        handleMarkedMovie={handleMarkedMovie}
-                      />
-                    );
-                  })
-                  .slice(0, cardsShow)}
-              </div>
-              {typeMovies.length > cardsShow && (
-                <button
-                  className="movies-cardlist__button"
-                  onClick={clickButton}
-                >
-                  Ещё
-                </button>
+            <div>
+              {typeMovies.length === 0 ? (
+                <div className="search-form__empty-block">
+                  <p className="search-form__empty-text">Ничего не найдено</p>
+                </div>
+              ) : (
+                <section className="movies-cardlist">
+                  <div className="movies-cardlist__cards">
+                    {typeMovies
+                      .map((movie) => {
+                        return (
+                          <MoviesCard
+                            {...movie}
+                            key={movie.movieId}
+                            movie={movie}
+                            checkIsMovieSaved={checkIsMovieSaved}
+                            handleMarkedMovie={handleMarkedMovie}
+                          />
+                        );
+                      })
+                      .slice(0, cardsShow)}
+                  </div>
+                  {typeMovies.length > cardsShow && (
+                    <button
+                      className="movies-cardlist__button"
+                      onClick={clickButton}
+                    >
+                      Ещё
+                    </button>
+                  )}
+                </section>
               )}
-            </section>
+            </div>
           )}
         </div>
       )}
       {location.pathname === "/saved-movies" && (
         <div>
-            <section className="movies-cardlist">
-              <div className="movies-cardlist__cards">
-                {typeMovies
-                  .map((movie) => {
-                    return (
-                      <MoviesCard
-                        {...movie}
-                        key={movie.movieId}
-                        movie={movie}
-                        checkIsMovieSaved={checkIsMovieSaved}
-                        handleMarkedMovie={handleMarkedMovie}
-                      />
-                    );
-                  })}
-              </div>
-            </section>
+          <section className="movies-cardlist">
+            <div className="movies-cardlist__cards">
+              {typeMovies.map((movie) => {
+                return (
+                  <MoviesCard
+                    {...movie}
+                    key={movie.movieId}
+                    movie={movie}
+                    checkIsMovieSaved={checkIsMovieSaved}
+                    handleMarkedMovie={handleMarkedMovie}
+                  />
+                );
+              })}
+            </div>
+          </section>
         </div>
       )}
     </>

@@ -14,6 +14,7 @@ import Error404 from "../utils/Error404.js";
 import moviesApi from "../utils/MoviesApi";
 import mainApi from "../utils/MainApi";
 import ProtectedRoute from "./ProtectedRoute";
+import LoginRoute from "./LoginRoute";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -65,7 +66,7 @@ function App() {
     Auth.getContent(jwt)
       .then((data) => {
         if (!data) return;
-        setCurrentUser(data);
+        setCurrentUser(data.data);
         console.log(currentUser);
         setLogin(true);
         location.pathname === "/signin" || location.pathname === "/signup"
@@ -87,6 +88,7 @@ function App() {
       .getUserInformation()
       .then((user) => {
         setCurrentUser(user.data);
+        handleGetSavedMovies();
         console.log(currentUser);
       })
       .catch((error) => {
@@ -213,13 +215,12 @@ function App() {
   }
 
   function handleGetSavedMovies() {
-    console.log(currentUser);
     setIsLoading(true);
     mainApi
       .getMovieList()
       .then((movies) => {
         setSavedMovies(
-          movies //.slice().filter((item) => item.owner === currentUser._id)
+          movies.slice().filter((item) => item.owner === currentUser._id)
         );
       })
       .catch((err) => {
@@ -262,6 +263,7 @@ function App() {
                     setIsShort={setIsShort}
                     shortMovie={shortMovie}
                     setIsLoading={setIsLoading}
+                    isLoading={isLoading}
                     handleSaveMovie={handleSaveMovie}
                     handleDeleteMovie={handleDeleteMovie}
                     handleMarkedMovie={handleMarkedMovie}
@@ -313,14 +315,18 @@ function App() {
               }
             ></Route>
           </Route>
-          <Route
-            path="/sign-up"
-            element={<Register handleRegister={handleRegister} />}
-          ></Route>
-          <Route
-            path="/sign-in"
-            element={<Login handleLogin={handleLogin} />}
-          ></Route>
+          <Route element={<LoginRoute loggedIn={login} />} path="/sign-up">
+            <Route
+              path="/sign-up"
+              element={<Register handleRegister={handleRegister} />}
+            ></Route>
+          </Route>
+          <Route element={<LoginRoute loggedIn={login} />} path="/sign-in">
+            <Route
+              path="/sign-in"
+              element={<Login handleLogin={handleLogin} />}
+            ></Route>
+          </Route>
           <Route path="*" element={<Error404 />}></Route>
         </Routes>
         <Footer />

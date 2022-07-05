@@ -17,7 +17,6 @@ function SavedMovies(props) {
   const setIsShort = props.setIsShort;
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
-  const lastSearch = localStorage.getItem("search");
   const useFormValidation = useFormValidator();
   const { searchValue } = useFormValidation.values;
   const { errors, isFormValid, resetForm } = useFormValidation;
@@ -39,7 +38,6 @@ function SavedMovies(props) {
 
   function changeMoviesType(e) {
     setIsShort(!props.isShort);
-    localStorage.setItem("checkbox", JSON.stringify(!props.isShort));
   }
 
   function handleSubmit(evt) {
@@ -61,7 +59,7 @@ function SavedMovies(props) {
             type="text"
             name="searchValue"
             id="searchValue"
-            placeholder={lastSearch || "Фильм"}
+            placeholder={"Фильм"}
             onChange={useFormValidation.handleChange}
             value={searchValue || ""}
             required
