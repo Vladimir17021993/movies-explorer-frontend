@@ -40,6 +40,7 @@ function App() {
         localStorage.setItem("jwt", data.jwt);
         setLogin(true);
         history("/movies");
+        isAppMovies();
       })
       .catch((err) => {
         console.log(err);
@@ -94,6 +95,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
+    isAppMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [login]);
 
@@ -101,6 +103,7 @@ function App() {
     localStorage.clear();
     history("/");
     setLogin(false);
+    setAppMovies([]);
   }
 
   function handleUpdateUser(data) {
@@ -230,12 +233,6 @@ function App() {
         setIsLoading(false);
       });
   }
-
-  useEffect(() => {
-    handleGetSavedMovies();
-    isAppMovies();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
