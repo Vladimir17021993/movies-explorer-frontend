@@ -24,6 +24,7 @@ function Movies(props) {
   const useFormValidation = useFormValidator();
   const { searchValue } = useFormValidation.values;
   const { errors, isFormValid, resetForm } = useFormValidation;
+  const [qwe, setqwe] = useState("");
 
   React.useEffect(() => {
     resetForm();
@@ -82,6 +83,16 @@ function Movies(props) {
     storageMovies();
   }, [storageMovies]);
 
+  useEffect(() => {
+      const savedInputValue = JSON.parse(localStorage.getItem("search"));
+
+      if (savedInputValue) {
+        setqwe(savedInputValue);
+      }
+    
+  }, []);
+  
+
   return (
     <div className="search-form__container">
       <section className="search-form">
@@ -94,7 +105,7 @@ function Movies(props) {
             id="searchValue"
             placeholder={"Фильм"}
             onChange={useFormValidation.handleChange}
-            value={searchValue || ""}
+            value={searchValue || "" || qwe}
             required
           />
           <button type="submit" className="search-form__button">
