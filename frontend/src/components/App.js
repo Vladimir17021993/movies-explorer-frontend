@@ -104,6 +104,7 @@ function App() {
     history("/");
     setLogin(false);
     setAppMovies([]);
+    setIsShort(false);
   }
 
   function handleUpdateUser(data) {
