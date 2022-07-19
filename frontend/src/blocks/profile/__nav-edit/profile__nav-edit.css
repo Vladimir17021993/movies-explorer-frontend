@@ -10,6 +10,10 @@
     border: none;
 }
 
-.profile__nav-edit:focus {
+.profile__nav-edit:hover {
     cursor: pointer;
+}
+
+.profile__nav-edit_disabled {
+    opacity: 0.2;
 }

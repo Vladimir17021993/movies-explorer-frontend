@@ -1,0 +1,10 @@
+.search-form__error {
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ee3465;
+}
