@@ -95,21 +95,35 @@ function MoviesCardList(props) {
       )}
       {location.pathname === "/saved-movies" && (
         <div>
-          <section className="movies-cardlist">
-            <div className="movies-cardlist__cards">
-              {typeMovies.map((movie) => {
-                return (
-                  <MoviesCard
-                    {...movie}
-                    key={movie.movieId}
-                    movie={movie}
-                    checkIsMovieSaved={checkIsMovieSaved}
-                    handleMarkedMovie={handleMarkedMovie}
-                  />
-                );
-              })}
+          {props.savedMovies.length === 0 ? (
+            <div className="search-form__empty-block">
+              <p className="search-form__empty-text">Нет сохраненных фильмов</p>
             </div>
-          </section>
+          ) : (
+            <div>
+              {typeMovies.length === 0 ? (
+                <div className="search-form__empty-block">
+                  <p className="search-form__empty-text">Ничего не найдено</p>
+                </div>
+              ) : (
+                <section className="movies-cardlist">
+                  <div className="movies-cardlist__cards">
+                    {typeMovies.map((movie) => {
+                      return (
+                        <MoviesCard
+                          {...movie}
+                          key={movie.movieId}
+                          movie={movie}
+                          checkIsMovieSaved={checkIsMovieSaved}
+                          handleMarkedMovie={handleMarkedMovie}
+                        />
+                      );
+                    })}
+                  </div>
+                </section>
+              )}
+            </div>
+          )}
         </div>
       )}
     </>

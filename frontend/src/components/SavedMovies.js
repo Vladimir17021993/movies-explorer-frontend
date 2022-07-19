@@ -102,6 +102,7 @@ function SavedMovies(props) {
           handleMarkedMovie={handleMarkedMovie}
           checkIsMovieSaved={checkIsMovieSaved}
           setMovies={setMovies}
+          savedMovies={savedMovies}
         />
       )}
     </div>

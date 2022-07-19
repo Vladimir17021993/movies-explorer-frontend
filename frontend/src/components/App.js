@@ -26,11 +26,6 @@ function App() {
   const history = useNavigate();
   const location = useLocation();
 
-  React.useEffect(() => {
-    tokenCheck();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   function handleLogin(data) {
     Auth.authorize(data.password, data.email)
       .then((data) => {
@@ -41,6 +36,7 @@ function App() {
         setLogin(true);
         history("/movies");
         isAppMovies();
+
       })
       .catch((err) => {
         console.log(err);
@@ -68,7 +64,6 @@ function App() {
       .then((data) => {
         if (!data) return;
         setCurrentUser(data.data);
-        console.log(currentUser);
         setLogin(true);
         location.pathname === "/signin" || location.pathname === "/signup"
           ? history("/movies")
@@ -89,13 +84,12 @@ function App() {
       .getUserInformation()
       .then((user) => {
         setCurrentUser(user.data);
-        handleGetSavedMovies();
         console.log(currentUser);
       })
       .catch((error) => {
         console.log(error);
-      });
-    isAppMovies();
+      })
+      isAppMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [login]);
 
@@ -105,6 +99,7 @@ function App() {
     setLogin(false);
     setAppMovies([]);
     setIsShort(false);
+    setCurrentUser({});
   }
 
   function handleUpdateUser(data) {
@@ -234,6 +229,18 @@ function App() {
         setIsLoading(false);
       });
   }
+
+  React.useEffect(() => {
+    if (login) {
+      handleGetSavedMovies();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentUser, login]);
+
+  React.useEffect(() => {
+    tokenCheck();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
